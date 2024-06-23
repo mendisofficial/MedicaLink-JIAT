@@ -1,0 +1,128 @@
+/* ==== Search Result Section Start */
+.add-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--profile-primary);
+    color: #fff;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+#search-result-section{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.patient-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-list .patient{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffffd2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.patient-list .patient img{
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+
+.patient-list .patient .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    user-select: none;
+}
+
+.patient-list .patient .info .highlight{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.patient-list .patient .controls{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.patient-list .patient .controls button{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.patient-list .patient .controls .edit{
+    background-color: rgb(35, 142, 91);
+}
+
+.patient-list .patient .controls .delete{
+    background-color: #d11a2a;
+}
+
+@media (max-width:576px){
+    .patient-list .patient{
+        overflow-x: auto;
+    }
+
+    .patient-list .patient .info{
+        margin-left: 20px;
+    }
+
+    .patient-list .patient .info.temp{
+        display: none;
+    }
+
+    .patient-list .patient .controls{
+        flex-direction: column;
+    }
+}
+/* ==== Search Result Section End ==== */
+
+/* ==== Patient Form Start ==== */
+
+#patient-form{
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+#patient-form .patient-form h6{
+    background-color: var(--profile-primary);
+    padding: 10px 10px;
+    color: #fff;
+}
+
+#patient-form .patient-form .controls{
+    display: flex;
+    align-items: center;
+}
+
+#patient-form .patient-form .controls button{
+    border: none;
+    border-radius: 6px;
+    padding: 6px 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#register-btn{
+    background-color: var(--profile-primary);
+}
+
+#cancel-btn{
+    background-color: #435a88;
+}
+
+/* ==== Patient Form End ==== */

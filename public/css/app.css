@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font-secondary: "Poppins", sans-serif;
+    --font-normal: 14px;
+}
+
+:root{
+    --color-primary: #0b7bbe;
+    --profile-head:#f2c0b9;
+    --profile-head-secondary:#3a5fb594;
+    --profile-primary: #0b7bbe;
+    --backdrop-blur: 5px;
+    --background-color: #f6f6f6;
+    --profile-secondary: #14967f;
+}
+
+*{
+    font-family: var(--font-secondary);
+    font-size: var(--font-normal);
+}
+
+.section-blur{
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==== Main Container Start ==== */
+#main{
+    display: flex;
+    flex-direction: row-reverse;
+    /* background: url(/assets/img/profile/Profile-BG.jpg); */
+    background-color: var(--background-color);
+    background-size: cover;
+    background-position: center;
+}
+/* ==== Main Container End ==== */
+
+@media (max-width:576px){
+    .section-blur{
+        backdrop-filter: none;
+    }
+
+    #main{
+        display: block;
+        position: relative;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+/* ==== working on it start ==== */
+.working-container{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.working-container .anime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.working-container .anime .desc h3{
+    font-size: 48px;
+    color: #ffd000;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.371);
+    text-transform: uppercase;
+}
+
+.working-container .anime .desc p{
+    max-width: 500px;
+}
+
+.working-container .anime .desc a{
+    border: 2px solid #ffd000;
+    color: #ffd000;
+    border-radius: 25px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-weight: 550;
+}
+
+.working-container .anime .desc a:hover{
+    background-color: #ffd000;
+    color: #000;
+}
+
+@media (max-width: 768px){
+    .working-container .anime{
+        flex-direction: column;
+    }
+
+    .working-container .anime .desc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .working-container .anime .desc p, .working-container .anime .desc h3{
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px){
+    .working-container{
+        display: block;
+    }
+
+    .working-container .anime{
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+
+    .working-container .anime .desc p{
+        max-width: 300px;
+    }
+
+    .working-container .anime .desc h3{
+        text-wrap: wrap;
+        font-size: 25px;
+    }
+}
+
+/* ==== working on it end */

@@ -1,0 +1,219 @@
+
+/* ==== Stats section start ==== */
+
+#stats-section{
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+#stats-section::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.stat-container{
+    display: flex;
+}
+
+.stat-container .stat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.stat-container .stat h6{
+    color: #3e3e3e;
+    font-size: 15px;
+}
+
+.stat-container .stat h4{
+    font-weight: 650;
+}
+
+.stat-container .stat .percentage{
+    font-size: 15px;
+}
+
+.stat-container .stat .percentage.good{
+    color: green;
+}
+
+.stat-container .stat .percentage.bad{
+    color: rgb(170, 0, 0);
+}
+
+.stat-container .stat .icon{
+    padding: 5px;
+    background-color: var(--profile-primary);
+    border-radius: 10px;
+}
+
+.stat-container .stat .icon span{
+    font-size: 50px;
+    color: #fff;
+}
+/* ==== Stats Section End */
+
+
+/* ==== Latest Patient Section Start ====*/
+.patients-container{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.patients-container .patient-list table tr > *{
+    background-color: transparent;
+}
+
+.patient-list table tr td .patient{
+    display: flex;
+    align-items: center;
+}
+
+.patient-list table tr td .patient img{
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+}
+
+.patient-list table tr td .patient div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+@media (max-width:576px){
+    .patients-container .patient-list{
+        overflow-x: auto;
+    }
+}
+
+/*==== Latest Patient Section End ====*/
+
+/* Comments and Reports Section Start */
+
+.comment-container{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.comment-list{
+    max-height: 258px;
+    overflow-y: auto;
+}
+
+.comment-list::-webkit-scrollbar{
+    width: 8px;
+}
+
+.comment-list::-webkit-scrollbar-thumb{
+    background-color: var(--profile-primary);
+    border-radius: 5px;
+}
+
+.comment-list .comment{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2c8;
+}
+
+.comment-list .comment img{
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comment-list .comment p{
+    margin-bottom: 0px;
+    margin-right: 10px;
+    max-height: 70px;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+.comment-list .comment .controls{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.comment-list .comment .controls span{
+    text-wrap: nowrap;
+}
+
+.comment-list .comment .controls button{
+    border: 0.5px solid var(--profile-primary);
+    background-color: var(--profile-primary);
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 4px 6px;
+    align-items: center;
+}
+
+/* Comments and Reports Section End */
+
+/* Latest Updates Section Start */
+
+.update-container{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.update-container .update-list table tr > *{
+    background-color: transparent;
+}
+
+.update-list table tr td .patient{
+    display: flex;
+    align-items: center;
+}
+
+.update-list table tr td .patient img{
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+}
+
+.update-list table tr td .patient div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.update-container table tr td .update-description{
+    max-width: 420px;
+}
+
+@media (max-width:576px){
+
+    .update-container .update-list{
+        overflow-x: auto;
+    }
+
+    .update-container table tr td .update-description{
+        max-width: none;
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+    .update-list table tr td .patient img{
+        display: none;
+    }
+    
+    .update-list table tr td .patient div{
+        margin-left: 0px;
+    }
+}
+
+/* Latest Udpates Section End */

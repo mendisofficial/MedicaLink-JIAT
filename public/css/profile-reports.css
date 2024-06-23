@@ -1,0 +1,356 @@
+:root{
+    --table-td-radius:10px;
+}
+
+/*===== Record Section =====*/
+.record-container{
+    border: none;
+    border-radius: 15px;
+}
+
+.record-container .section-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.section-controls .section-links button{
+    background-color: transparent;
+    color:  var(--profile-primary);
+    position: relative;
+    border: 1px solid  var(--profile-primary);
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden !important;
+    display: flex;
+}
+
+.section-controls .section-links button span,.section-controls .tag-links a{
+    text-wrap: nowrap;
+}
+
+.section-controls .section-links button::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    transform: scaleX(0%);
+    transform-origin: left;
+    transition: transform 0.3s ease, background-color 0.4s ease;
+    z-index: -1;
+}
+
+.section-controls .section-links button.active, .section-controls .section-links button:hover{
+    background-color:  var(--profile-primary);
+}
+
+.section-controls .section-links button.active::after, .section-controls .section-links button:hover::after{
+    transform: scaleX(100%);
+    background-color:  var(--profile-primary);
+}
+
+.section-controls .section-links button.active, .section-controls .section-links button:hover{
+    color: #fff;
+}
+
+.record-container hr{
+    margin-top: 0;
+    border-color: #5a5a5a;
+    border-width: 1.8px;
+}
+
+.section-controls .tag-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-controls .tag-links a{
+    font-size: 14px;
+    border: 1px solid var(--profile-secondary);
+    color: var(--profile-secondary);
+    border-radius: 15px;
+    transition: background-color 0.4s ease;
+}
+
+.section-controls .tag-links a:hover, .section-controls .tag-links a.active{
+    background-color: var(--profile-secondary);
+    color: white;
+}
+
+.add-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--profile-primary);
+    color: #fff;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+#record-data-container .table-container table{
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+
+#record-data-container .table-container table td, #record-data-container .table-container table th{
+    background-color: transparent;
+    padding: 10px 15px;
+}
+
+#record-data-container .table-container{
+    max-height: 400px;
+    overflow-x: auto;
+}
+
+#record-data-container .table-container::-webkit-scrollbar{
+    width: 10px;
+}
+
+#record-data-container .table-container::-webkit-scrollbar-track{
+    width: 10px;
+}
+
+#record-data-container .table-container::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: var(--profile-primary);
+    border-radius: 5px;
+}
+
+#record-data-container .table-container table thead{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -8px;
+    z-index: 5;
+    background-color: white;
+}
+
+#record-data-container .table-container table tbody td,#record-data-container .table-container table tbody th{
+    vertical-align: middle;
+    background-color: #fff;
+    padding: 12px 15px;
+}
+
+#record-data-container .table-container table td .view-more{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 12px;
+    background-color: var(--profile-secondary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#record-data-container .table-container table tbody tr > *:first-child{
+    border-top-left-radius: var(--table-td-radius);
+    border-bottom-left-radius: var(--table-td-radius);
+}
+
+#record-data-container .table-container table tbody tr > *:last-child{
+    border-top-right-radius: var(--table-td-radius);
+    border-bottom-right-radius: var(--table-td-radius);
+}
+
+#record-data-container .table-container table tbody tr{
+    z-index: 1;
+    position: relative;
+    border-radius: 50px;
+}
+
+#record-data-container .table-container table tbody tr.editable::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 5;
+}
+
+@media (max-width:991px){
+    #record-data-container .table-container table tbody tr > *:nth-child(2){
+        border-top-left-radius: var(--table-td-radius);
+        border-bottom-left-radius: var(--table-td-radius);
+    }
+    
+    #record-data-container .table-container table tbody tr > *:nth-child(6){
+        border-top-right-radius: var(--table-td-radius);
+        border-bottom-right-radius: var(--table-td-radius);
+    }
+}
+
+@media (max-width:765px){
+
+    #record-data-container .table-container table tbody tr > *:nth-child(5){
+        border-top-right-radius: var(--table-td-radius);
+        border-bottom-right-radius: var(--table-td-radius);
+    }
+}
+
+@media (max-width:576px){
+
+    #record-data-container .table-container table tbody td,#record-data-container .table-container table tbody th{
+        padding: 8px 10px;
+    }
+}
+
+/* ==== Result Navigation Section Start ==== */
+
+.result-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 14px;
+}
+
+.result-nav .numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.result-nav button{
+    background-color: rgb(221, 221, 221);
+    color: #000000;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-nav .numbers div{
+    padding: 3px 10px;
+    border: 1.5px solid var(--profile-primary);
+    color: var(--profile-primary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.result-nav .numbers div.active{
+    background-color: var(--profile-primary);
+    color: #fff;
+}
+
+/* ==== Result Navigation Section End ==== */
+
+/*===== Record Section End =====*/
+
+/* Popup Section Start */
+#pop-up-container{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000003f;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
+
+#pop-up{
+    transform-origin: bottom;
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #fff;
+    padding: 60px 50px 0px 50px;
+    z-index: 20;
+}
+
+#pop-up .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+#pop-up .close-btn span{
+    font-size: 30px;
+}
+
+#pop-up .content{
+    overflow-y: auto;
+    max-height: calc(100% - 80px);
+}
+
+#pop-up .content .edit-btn,#pop-up .content .cancel-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+#pop-up .content .edit-btn{
+    background-color: var(--profile-primary);
+}
+
+#pop-up .content .cancel-btn{
+    background-color: #737373;
+}
+
+#pop-up .content .edit-btn-container, #pop-up .content .cancel-btn-container{
+    position: sticky;
+    top: 20px;
+}
+
+#pop-up .content .record{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+#pop-up .content .record .title{
+    font-size: 18px;
+    font-weight: 550;
+}
+
+/* tablet styles */
+@media (max-width:768px){
+    #pop-up{
+        padding: 60px 50px 0px 50px;
+    }
+}
+
+/* mobile styles */
+@media (max-width:576px){
+    #pop-up{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 30px 22px 0px 22px;
+    }
+
+    #pop-up .close-btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+/* Popup Section End */

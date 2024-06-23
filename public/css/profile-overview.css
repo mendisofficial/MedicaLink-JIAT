@@ -1,0 +1,206 @@
+/*===== Profile Section =====*/
+.profile-main{
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.profile-main .title{
+    font-size: 18px;
+}
+
+.profile-image{
+    background: url(/images/profile/profile-background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 160px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.profile-image img{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(40%);
+    width: 50%;
+    border: none;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+@media (min-width:768px) {
+    .profile-image img{
+        width: 25%;
+    }
+}
+
+@media (min-width:992px) {
+    .profile-image img{
+        width: 50%;
+    }
+}
+
+.profile-section{
+    padding-bottom: 10px;
+}
+
+.profile-section h5{
+    color: #efefef;
+    background-color: var(--profile-head-secondary);
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 17px;
+}
+
+.profile-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-group li{
+    list-style-type: none;
+    font-size: 14px;
+    padding-left: 5px;
+    font-weight: 450;
+    color: #000000;
+}
+
+.profile-group .title{
+    color: #050343;
+    font-size: 16px;
+}
+
+.profile-section .share-button{
+    background-color: var(--profile-primary);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: #f9f8f8;
+    font-weight: 400;
+}
+/*===== Profile Section End =====*/
+
+/*===== Record Section =====*/
+.record-container{
+    border: none;
+    border-radius: 15px;
+}
+
+.record-container .section-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.section-controls .section-links button{
+    background-color: transparent;
+    color:  var(--profile-primary);
+    position: relative;
+    border: 1px solid  var(--profile-primary);
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden !important;
+    display: flex;
+}
+
+.section-controls .section-links button span,.section-controls .tag-links button{
+    text-wrap: nowrap;
+}
+
+.section-controls .section-links button::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    transform: scaleX(0%);
+    transform-origin: left;
+    transition: transform 0.3s ease, background-color 0.4s ease;
+    z-index: -1;
+}
+
+.section-controls .section-links button.active, .section-controls .section-links button:hover{
+    background-color:  var(--profile-primary);
+}
+
+.section-controls .section-links button.active::after, .section-controls .section-links button:hover::after{
+    transform: scaleX(100%);
+    background-color:  var(--profile-primary);
+}
+
+.section-controls .section-links button.active, .section-controls .section-links button:hover{
+    color: #fff;
+}
+
+.record-container hr{
+    margin-top: 0;
+    border-color: #5a5a5a;
+    border-width: 1.8px;
+}
+
+.section-controls .tag-links{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-controls .tag-links a{
+    font-size: 14px;
+    border: 1px solid var(--profile-secondary);
+    color: var(--profile-secondary);
+    border-radius: 15px;
+    transition: background-color 0.4s ease;
+}
+
+.section-controls .tag-links a:hover, .section-controls .tag-links a.active{
+    background-color: var(--profile-secondary);
+    color: white;
+}
+
+.vaccination-table .vhead .vtr, .vaccination-table .vbody .vtr .tr{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.vaccination-table .vbody .vtr .tr{
+    padding: 10px 0px;
+}
+
+.vaccination-table .vbody .vtr{
+    position: relative;
+    margin: 5px 0px;
+    background-color: #f4f4f4ec;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.vaccination-table .vhead{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.vaccination-table .vbody .vtr .notes{
+    background-color: #dce9ffdc;
+}
+
+.vbody .vtr .notes h6{
+    font-size: 15px;
+}
+
+.vbody .vtr .notes p{
+    font-size: 14px;
+}
+/*===== Record Section End =====*/

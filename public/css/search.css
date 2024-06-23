@@ -1,0 +1,73 @@
+/* ==== Search Result Section Start */
+
+#search-result-section{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.patient-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-list .patient{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffffd2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.patient-list .patient img{
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+
+.patient-list .patient .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    user-select: none;
+}
+
+.patient-list .patient .info .highlight{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.patient-list .patient .view-btn{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: auto;
+    padding: 8px 15px;
+    background-color: var(--profile-primary);
+    color: #fff;
+}
+
+.patient-list .patient .view-btn span{
+    text-wrap: nowrap;
+}
+
+@media (max-width:576px){
+    .patient-list .patient{
+        overflow-x: auto;
+    }
+
+    .patient-list .patient .info{
+        margin-left: 20px;
+    }
+
+    .patient-list .patient .info.temp{
+        display: none;
+    }
+
+    .patient-list .patient .view-btn{
+        margin-left: 10px;
+    }
+}
+/* ==== Search Result Section End ==== */

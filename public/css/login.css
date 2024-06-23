@@ -1,0 +1,146 @@
+:root{
+    --form-primary: #fff;
+    --form-focus: #0a0a9c;
+}
+
+.shape{
+    position: absolute;
+    background-color: var(--profile-primary);
+    border-radius: 50%;
+}
+
+#shape1{
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    top: 10%;
+}
+
+#shape2{
+    right: 10%;
+    width: 250px;
+    height: 250px;
+    top: 60%;
+}
+
+#login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 50px 40px;
+    border-radius: 15px;
+    background-color: #0000004d;
+    color: var(--form-primary);
+    z-index: 2;
+}
+
+#login-container form label{
+    margin-top: 10px;
+}
+
+#login-container .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-container .logo img{
+    height: 100px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.input::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 95%;
+    height: 1.5px;
+    transform: translateX(-50%);
+    background-color: #e4e4e4;
+}
+
+.input:focus-within{
+    color: var(--form-focus);
+}
+
+.input:focus-within::before{
+    height: 2px;
+    background-color: var(--form-focus);
+}
+
+.input.wrong:focus-within{
+    color: red;
+}
+
+.input.wrong:focus-within::before{
+    background-color: red;
+}
+
+.input input{
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.input input::placeholder{
+    color: #e5e5e5e6;
+}
+
+.sign-in-btn{
+    width: 100%;
+    padding: 0px 8px;
+    margin-top: 15px;
+}
+
+.sign-in-btn button{
+    background-color: var(--profile-primary);
+    color: #fff;
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px){
+    #login-container form{
+        width: 580px;
+    } 
+
+    #login-container .logo img{
+        height: 100px;
+    }
+}
+
+@media (max-width: 575px){
+    #login-container form{
+        padding: 40px 30px;
+    }
+
+    #login-container .logo img{
+        height: 80px;
+    }
+}

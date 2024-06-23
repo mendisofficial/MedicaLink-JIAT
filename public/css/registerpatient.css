@@ -1,0 +1,208 @@
+/*===== Search Section =====*/
+
+#search-controls-section{
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+#search-controls-section:focus-within{
+    background-color: #ffffffd3;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.279);
+}
+
+#search-controls-section .search-controls{
+    justify-content: center;
+}
+
+#search-controls-section .search-controls button{
+    border: none;
+    background-color: transparent;
+}
+
+#search-controls-section .search-controls .search-bar{
+    background-color: transparent;
+    box-sizing: content-box;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    border: none;
+}
+
+#search-controls-section .search-controls .search-bar:focus{
+    outline: none;
+}
+
+.add-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--profile-primary);
+    color: #fff;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.search-filter ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.search-filter .category{
+    border: 0.5px solid rgb(36, 36, 36);
+    padding: 2px 15px;
+    width: fit-content;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.search-filter .category:hover{
+    color: var(--profile-primary);
+    border-color: var(--profile-primary);
+}
+
+.search-filter .category.active{
+    color: #ffffff;
+    background-color: var(--profile-primary);
+    border-color: var(--profile-primary);
+}
+
+.search-filter .date-controls .control{
+    display: flex;
+    align-items: center;
+}
+
+.search-filter .date-controls .control input{
+    border: 0.5px solid rgb(124, 124, 124);
+    outline: none;
+    border-radius: 8px;
+    padding: 2px 10px;
+}
+
+/*===== Search Section End =====*/
+
+/* ==== Search Result Section Start */
+
+#search-result-section{
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.patient-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-list .patient{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffffd2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.patient-list .patient img{
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+
+.patient-list .patient .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    user-select: none;
+}
+
+.patient-list .patient .info .highlight{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.patient-list .patient .controls{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.patient-list .patient .controls button{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.patient-list .patient .controls .edit{
+    background-color: rgb(35, 142, 91);
+}
+
+.patient-list .patient .controls .delete{
+    background-color: #d11a2a;
+}
+
+@media (max-width:576px){
+    .patient-list .patient{
+        overflow-x: auto;
+    }
+
+    .patient-list .patient .info{
+        margin-left: 20px;
+    }
+
+    .patient-list .patient .info.temp{
+        display: none;
+    }
+
+    .patient-list .patient .controls{
+        flex-direction: column;
+    }
+}
+/* ==== Search Result Section End ==== */
+
+/* ==== Patient Form Start ==== */
+
+#patient-form{
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+#patient-form .patient-form h6{
+    background-color: var(--profile-primary);
+    padding: 10px 10px;
+    color: #fff;
+}
+
+#patient-form .patient-form .controls{
+    display: flex;
+    align-items: center;
+}
+
+#patient-form .patient-form .controls button{
+    border: none;
+    border-radius: 6px;
+    padding: 6px 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#register-btn{
+    background-color: var(--profile-primary);
+}
+
+#cancel-btn{
+    background-color: #435a88;
+}
+
+/* ==== Patient Form End ==== */
